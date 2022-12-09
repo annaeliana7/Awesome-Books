@@ -1,0 +1,278 @@
+/* ================================*\
+              Reseting CSS
+*\================================ */
+
+/* Reset  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  border: 1px solid var(--black-color);
+  padding: 0.5rem;
+  box-shadow: 5px 5px;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+address {
+  display: inline;
+}
+
+:root {
+  /* colors */
+  --primary-color: #fff;
+  --secondary-color: #b3b3b3;
+  --black-color: #000;
+
+  /* font sizes  */
+  --size-1: 1.6rem;
+  --size-2: 2.4rem;
+  --size-3: 3.2rem;
+  --size-4: 4rem;
+  --size-5: 4.8rem;
+  --size-6: 5.6rem;
+
+  /* Height sizes */
+  --height-1: 72px;
+  --height-2: 100px;
+  --height-100: 100%;
+  --height-70: 70%;
+}
+
+html {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 62.5%;
+}
+
+/* ================================*\
+              HEADER
+*\================================ */
+header {
+  width: 100%;
+  height: var(--height-1);
+  padding: 0.5rem;
+}
+
+nav {
+  width: 95%;
+  height: var(--height-70);
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  border: 1px solid var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--size-1);
+}
+
+nav h3 {
+  font-size: var(--size-1);
+}
+
+nav ul {
+  display: flex;
+  font-size: var(--size-1);
+}
+
+nav ul li {
+  padding: 0 var(--size-1);
+}
+
+nav ul li:last-child {
+  padding-right: 0;
+}
+
+nav ul li:not(:nth-child(1)) {
+  border-left: 1px solid var(--black-color);
+}
+
+nav ul li a {
+  position: relative;
+  font-weight: 700;
+}
+
+nav ul li a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  height: 2px;
+  background-color: var(--black-color);
+  width: 0%;
+  transition: all 0.5s ease-in;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.date {
+  width: 95%;
+  margin: 0 auto;
+  text-align: end;
+  font-weight: 400;
+}
+
+/* ================================*\
+            Main
+*\================================ */
+
+main {
+  width: 100%;
+  height: calc(100vh - 124px);
+  padding: 0.5rem;
+}
+
+main .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-1);
+}
+
+main .content h1 {
+  font-size: var(--size-3);
+  text-align: center;
+}
+
+.book-list {
+  width: 100%;
+  display: none;
+  justify-content: center;
+}
+
+.book-list.active {
+  display: flex;
+}
+
+.book-list table {
+  border: 2px solid var(--black-color);
+  width: 100%;
+  max-width: 800px;
+}
+
+.book-list table tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-list table tbody:nth-child(odd) {
+  background-color: var(--secondary-color);
+}
+
+.book-list table tr td {
+  font-size: var(--size-1);
+  font-weight: 500;
+  margin: 0 var(--size-1);
+  padding: 0.5rem 0;
+}
+
+.book-list table tbody:nth-child(even) .remove-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.book-list table tbody:nth-child(odd) .remove-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* ================================*\
+            Add list
+*\================================ */
+.add-book {
+  width: 100%;
+  display: none;
+}
+
+.add-book.active {
+  display: block;
+}
+
+.add-book .send-book {
+  max-width: 800px;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+  margin-top: var(--size-6);
+}
+
+.add-book .send-book input {
+  padding: 0.5rem;
+  border: 2px solid var(--black-color);
+  outline-color: var(--secondary-color);
+}
+
+.add-book .send-book .submit-btn {
+  text-align: end;
+}
+
+/* ================================*\
+            Contact Info
+*\================================ */
+
+.contact-info {
+  padding-top: var(--size-6);
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--size-1);
+}
+
+.contact-info.active {
+  display: flex;
+}
+
+.contact-info ul {
+  list-style: disc;
+}
+
+/* ================================*\
+            Footer
+*\================================ */
+
+footer {
+  position: fixed;
+  bottom: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+footer h3 {
+  font-size: var(--size-1);
+  border: 1px solid var(--black-color);
+  width: 95%;
+  padding: 0 var(--size-1);
+  margin: 0 auto;
+  height: var(--size-4);
+  display: flex;
+  align-items: center;
+}
