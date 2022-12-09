@@ -41,7 +41,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Awesome Books](http: to come/)
+[Awesome Books](https://annaeliana7.github.io/Awesome-Books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,5 +125,10 @@ Give a ⭐️ if you like this project!
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-=======
-#Awesome Books-2022
+
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
