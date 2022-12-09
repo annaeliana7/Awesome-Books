@@ -30,7 +30,7 @@ const populateBookList = () => {
     });
   }
 };
-// Change and show content 
+// Change and show content
 export const showContent = (title, id) => {
   contentTitle.innerHTML = title;
   switch (id) {
